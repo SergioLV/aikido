@@ -1,0 +1,117 @@
+---
+---
+
+<section id="sensei" class="sensei">
+  <div class="container">
+    <h2 class="reveal">Sensei</h2>
+    <div class="sensei-grid reveal reveal-delay-1">
+      <div class="sensei-image">
+        <img src="/sensei_juan_caroca.jpeg" alt="Sensei Juan Caroca durante una clase de Aikido" />
+      </div>
+      <div class="sensei-text">
+        <h3>Sensei Juan Caroca — Linaje y Formación</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          eu fugiat nulla pariatur.
+        </p>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+          error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+        </p>
+        <ul class="credentials">
+          <li>4º Dan — Aikikai</li>
+          <li>+20 años de práctica</li>
+          <li>Instructor certificado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sensei {
+    padding: 6rem 2rem;
+    background: var(--color-surface);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-dark);
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-accent);
+    margin: 1rem auto 0;
+  }
+
+  .sensei-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .sensei-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  .sensei-text p {
+    color: var(--color-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .credentials {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .credentials li {
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .credentials li:hover {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+  }
+
+  @media (max-width: 700px) {
+    .sensei-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

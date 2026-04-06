@@ -1,0 +1,109 @@
+---
+const testimonials = [
+  {
+    text: 'El Aikido ha cambiado completamente cómo manejo el estrés. La práctica te enseña a mantener la calma y el centro, tanto dentro como fuera del tatami.',
+    name: 'María L.',
+    years: '3 años practicando',
+  },
+  {
+    text: 'Empecé a los 45 sin ninguna experiencia en artes marciales. El dojo es increíblemente acogedor y Sensei adapta la enseñanza a cada alumno.',
+    name: 'Jaime R.',
+    years: '2 años practicando',
+  },
+  {
+    text: 'Mi hijo ha ganado mucha confianza y disciplina desde que se unió a la clase infantil. Espera cada sesión con muchas ganas.',
+    name: 'Ana P.',
+    years: 'Madre de alumno',
+  },
+];
+---
+
+<section id="testimonios" class="testimonials">
+  <div class="container">
+    <h2 class="reveal">Lo que Dicen Nuestros Alumnos</h2>
+    <div class="testimonial-grid reveal reveal-delay-1">
+      {testimonials.map((t) => (
+        <blockquote>
+          <p>"{t.text}"</p>
+          <footer>
+            <cite>{t.name}</cite>
+            <span>{t.years}</span>
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 6rem 2rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-dark);
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-accent);
+    margin: 1rem auto 0;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  blockquote {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  blockquote:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  blockquote p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  cite {
+    font-style: normal;
+    font-size: 0.95rem;
+    color: var(--color-dark);
+  }
+
+  footer span {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+</style>

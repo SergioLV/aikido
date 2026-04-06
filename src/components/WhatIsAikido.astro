@@ -1,0 +1,114 @@
+---
+---
+
+<section id="aikido" class="aikido">
+  <div class="container">
+    <h2 class="reveal">¿Qué es el Aikido?</h2>
+    <div class="content">
+      <p class="reveal reveal-delay-1">
+        El Aikido es un arte marcial japonés moderno conocido como <em>El Arte de la Paz</em>.
+        A diferencia de otras artes marciales, el Aikido no se basa en la fuerza muscular
+        ni en la agresión. Los practicantes aprenden a armonizar con la energía del
+        atacante y redirigirla mediante movimientos fluidos y circulares.
+      </p>
+      <p class="reveal reveal-delay-2">
+        Fundado por Morihei Ueshiba (O-Sensei) a principios del siglo XX, el Aikido
+        proviene de las artes tradicionales de la espada y la lanza. Desarrolla el
+        equilibrio, la coordinación, la conciencia corporal y una mente serena —
+        habilidades que se extienden mucho más allá del dojo hacia la vida cotidiana.
+      </p>
+      <div class="highlights reveal reveal-delay-2">
+        <div class="highlight">
+          <span class="kanji" aria-hidden="true">合</span>
+          <h3>Armonía</h3>
+          <p>Fusionarse con las fuerzas opuestas en lugar de chocar contra ellas.</p>
+        </div>
+        <div class="highlight">
+          <span class="kanji" aria-hidden="true">気</span>
+          <h3>Energía</h3>
+          <p>Dirigir y extender la energía vital a través de la respiración y el movimiento.</p>
+        </div>
+        <div class="highlight">
+          <span class="kanji" aria-hidden="true">道</span>
+          <h3>El Camino</h3>
+          <p>Un camino de desarrollo personal, disciplina y paz que dura toda la vida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .aikido {
+    padding: 6rem 2rem;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--color-dark);
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-accent);
+    margin: 1rem auto 0;
+  }
+
+  .content > p {
+    color: var(--color-muted);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .highlight {
+    text-align: center;
+  }
+
+  .kanji {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+  }
+
+  .highlight p {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    .highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

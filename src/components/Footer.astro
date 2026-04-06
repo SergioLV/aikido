@@ -1,0 +1,45 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="footer-inner">
+    <span class="logo">DOJO</span>
+    <p>&copy; {year} Dojo de Aikido. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 500px) {
+    .footer-inner {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>

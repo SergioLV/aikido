@@ -1,0 +1,111 @@
+---
+const faqs = [
+  {
+    q: '¿Necesito experiencia previa?',
+    a: 'Para nada. Nuestras clases de todos los niveles están diseñadas para principiantes. Aprenderás a tu propio ritmo en un ambiente de apoyo.',
+  },
+  {
+    q: '¿A qué edad se puede empezar?',
+    a: 'Ofrecemos clases para niños a partir de los 7 años. Las clases de adultos son para mayores de 15 años. No hay límite de edad — el Aikido se adapta a tu cuerpo.',
+  },
+  {
+    q: '¿Qué ropa debo llevar el primer día?',
+    a: 'Ropa deportiva cómoda (chándal o similar) es suficiente para tu primera sesión. Si decides continuar, necesitarás un keikogi blanco (uniforme de entrenamiento).',
+  },
+  {
+    q: '¿El Aikido es efectivo para la defensa personal?',
+    a: 'Sí. El Aikido te enseña a neutralizar la agresión mediante llaves articulares, proyecciones e inmovilizaciones — usando la energía del atacante en lugar de oponerte con fuerza.',
+  },
+  {
+    q: '¿Cuánto cuesta?',
+    a: 'Tu primera clase es gratuita. Después ofrecemos membresías mensuales. Contáctanos para conocer los precios actuales.',
+  },
+];
+---
+
+<section id="faq" class="faq">
+  <div class="container">
+    <h2 class="reveal">Preguntas Frecuentes</h2>
+    <div class="faq-list reveal reveal-delay-1">
+      {faqs.map((faq) => (
+        <details>
+          <summary>{faq.q}</summary>
+          <p>{faq.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 6rem 2rem;
+    background: var(--color-surface);
+  }
+
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-dark);
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-accent);
+    margin: 1rem auto 0;
+  }
+
+  details {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  summary {
+    padding: 1.25rem 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-dark);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s;
+  }
+
+  summary:hover {
+    color: var(--color-accent);
+  }
+
+  summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details p {
+    padding: 0 0 1.25rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+</style>

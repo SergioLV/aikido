@@ -1,0 +1,200 @@
+---
+const benefits = [
+  {
+    icon: '和',
+    title: 'Trabajo en Equipo',
+    desc: 'Dinámicas basadas en el Aikido que fortalecen la confianza y la colaboración entre equipos.',
+  },
+  {
+    icon: '息',
+    title: 'Manejo del Estrés',
+    desc: 'Técnicas de respiración, centramiento y movimiento para reducir la tensión laboral.',
+  },
+  {
+    icon: '導',
+    title: 'Liderazgo Consciente',
+    desc: 'Principios de armonía y redirección aplicados a la resolución de conflictos y toma de decisiones.',
+  },
+  {
+    icon: '言',
+    title: 'Comunicación Efectiva',
+    desc: 'Ejercicios corporales que desarrollan la escucha activa y la presencia en las interacciones.',
+  },
+];
+---
+
+<section id="organizacional" class="organizacional">
+  <div class="container">
+    <h2 class="reveal">Aikido Organizacional</h2>
+    <p class="intro reveal reveal-delay-1">
+      Llevamos los principios del Aikido al mundo corporativo. A través de talleres
+      y programas diseñados para empresas, ayudamos a equipos de trabajo a desarrollar
+      habilidades de liderazgo, comunicación y manejo de conflictos usando el cuerpo
+      como herramienta de aprendizaje.
+    </p>
+
+    <div class="benefits-grid reveal reveal-delay-2">
+      {benefits.map((b) => (
+        <div class="benefit">
+          <span class="icon" aria-hidden="true">{b.icon}</span>
+          <h3>{b.title}</h3>
+          <p>{b.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="offerings reveal reveal-delay-3">
+      <div class="offering">
+        <h3>Talleres para Empresas</h3>
+        <p>
+          Sesiones de medio día o jornada completa adaptadas a las necesidades
+          de tu organización. Ideales para team building, jornadas de integración
+          o programas de bienestar corporativo.
+        </p>
+      </div>
+      <div class="offering">
+        <h3>Programas Continuos</h3>
+        <p>
+          Clases semanales en las instalaciones de tu empresa. Un espacio regular
+          para que tu equipo practique y desarrolle habilidades blandas a través
+          del movimiento.
+        </p>
+      </div>
+      <div class="offering">
+        <h3>Charlas y Conferencias</h3>
+        <p>
+          Presentaciones interactivas sobre los principios del Aikido aplicados
+          al liderazgo, la gestión del cambio y la cultura organizacional.
+        </p>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#contacto" class="cta">Solicitar Información</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .organizacional {
+    padding: 6rem 2rem;
+    background: var(--color-dark);
+    color: #fff;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 1rem auto 0;
+  }
+
+  .intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .benefit {
+    text-align: center;
+  }
+
+  .icon {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .benefit h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .benefit p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+
+  .offerings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .offering {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .offering:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .offering h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+  }
+
+  .offering p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .cta-wrap {
+    text-align: center;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+  }
+
+  .cta:hover {
+    background: #fff;
+    color: var(--color-dark);
+  }
+</style>
